@@ -183,6 +183,7 @@ nav ul.show {
 .bio h2 {
     margin-bottom: var(--bottom-margin);
     color: var(--primary-color);
+    text-align: center;
 }
 
 .bio p {
@@ -215,9 +216,10 @@ nav ul.show {
 .mas-sobre p {
     line-height: var(--line-height);
     text-align: justify;
+    padding: 0.3rem 0;
     margin-bottom: var(--bottom-margin);
     color: var(--color-white);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .mas-sobre p:hover {
