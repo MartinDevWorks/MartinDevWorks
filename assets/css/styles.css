@@ -265,7 +265,7 @@ nav ul.show {
     background-color: var(--bg-color);
     border-radius: 11px;
     box-shadow: 0 1px 5px var(--secondary-color);
-    padding: 3rem;
+    padding: 2rem;
     margin: 1rem;
 }
 
