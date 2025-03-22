@@ -430,7 +430,7 @@ outline: 3px solid var(--secondary-color); */
     flex-direction: column;
     position: fixed;
     right: 1%;
-    bottom: 40%;
+    bottom: 35%;
     gap: 0.5rem;
 } 
 
