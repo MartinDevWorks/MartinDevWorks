@@ -65,20 +65,20 @@ nav {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem 0.2rem;    
+    padding: 0.1rem 0.2rem;    
     background-color: var(--button-bg);
 }  
 
 nav h1 {
     color: var(--primary-color);
-    font-size: 1.9rem;
-    padding-left: 2rem;
+    font-size: 1.5rem;
+    padding-left: 1rem;
 }
 
 
 nav span {
     color: var(--secondary-color);
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 0;
 }
 
@@ -89,7 +89,7 @@ nav a {
     transition: var(--transition);
     position: relative;
     transition: color 0.3s ease-in-out, background-color 0.3s ease;
-    padding-left: 3rem;
+    padding-left: 3.5rem;
 } 
 
 
