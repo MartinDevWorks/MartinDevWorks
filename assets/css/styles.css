@@ -238,7 +238,7 @@ summary {
 
 @media (max-width: 768px) {
     summary {
-        width: 80%;
+        width: 100%;
     }
     
 }
