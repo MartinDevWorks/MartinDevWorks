@@ -198,8 +198,7 @@ nav ul.show {
 }
 
 /* Mas sobre mi */
-.mas-sobre {
-    background-color: linear-gradient(135deg, var(--primary-color), var(--primary-color-2));
+.mas-sobre {    
     padding: 1.5rem 3rem;
     margin-top: 2rem;
     max-width: 68.75rem;
@@ -232,26 +231,22 @@ summary {
     border-radius: 6px;
     transition: all 0.3s ease;
     background-color: var(--button-bg);
-    width: 30%;
+    max-width: 30%;
+    min-width: 180px;
     margin: 0 auto;
 }
 
 @media (max-width: 768px) {
     summary {
-        width: 100%;
-    }
-    
-}
-
-@media (max-width: 480px) {
-    summary {
         max-width: 100%;
+        line-height: none;
     }
     
 }
 
 summary:hover {
     color: var(--color-white);
+    background-color: var(--primary-color);
 }
 
 details[open]  {
@@ -265,7 +260,7 @@ details[open]  {
 .mas-sobre p {
     line-height: var(--line-height);
     text-align: justify;
-    padding: 0.5rem 0;
+    padding: 0.1rem 0;
     margin-bottom: var(--bottom-margin);
     color: var(--color-white);
     font-size: 1.1em;
