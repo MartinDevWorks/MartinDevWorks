@@ -17,7 +17,7 @@
     --button-bg: #21262d;
     --bottom-margin: 0.5rem;
     --bottom-margin-2: 1rem;
-    --line-height: 1.6rem;
+    --line-height: 1.5rem;
     --transition: 0.3s;
 }
   /* Variables fin */  
@@ -198,9 +198,9 @@ nav ul.show {
 }
 
 /* Mas sobre mi */
-.mas-sobre {    
-    padding: 1.5rem 3rem;
-    margin-top: 2rem;
+.mas-sobre {   
+    padding: 1.5rem 2.5rem;
+    margin-top: 1.5rem;
     max-width: 68.75rem;
     text-align: center;
     margin: 0 auto;
@@ -209,8 +209,7 @@ nav ul.show {
 }
 
 .mas-sobre:hover {
-    transform: scale(1.02);
-    
+    transform: scale(1.02);    
 }
 
 details {
@@ -219,19 +218,18 @@ details {
     border-radius: 8px;
     transition: all 0.3s ease;
     overflow: hidden;
-
 }
 
 summary {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: var(--color-white);
     cursor: pointer;
     font-weight: var(--bold-font);
-    padding: 0.9rem;
+    padding: 0.6rem;
     border-radius: 6px;
     transition: all 0.3s ease;
-    background-color: var(--button-bg);
-    max-width: 30%;
+    background-color: var(--primary-color);
+    max-width: 40%;
     min-width: 180px;
     margin: 0 auto;
 }
@@ -240,8 +238,7 @@ summary {
     summary {
         max-width: 100%;
         line-height: none;
-    }
-    
+    }   
 }
 
 summary:hover {
@@ -251,19 +248,19 @@ summary:hover {
 
 details[open]  {
     background-color: var(--button-bg);
-    box-shadow: 0 5px 5px var(--secondary-color);
+    box-shadow: 0 2px 5px var(--secondary-color);
     padding: 1.5rem;
-    border-radius: 12px;
-    
+    border-radius: 12px; 
+    transition: transform 0.3s ease-in-out; 
 }
 
 .mas-sobre p {
     line-height: var(--line-height);
-    text-align: justify;
-    padding: 0.1rem 0;
+    text-align: initial;
+    padding: 1.5rem 0;
     margin-bottom: var(--bottom-margin);
     color: var(--color-white);
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 
