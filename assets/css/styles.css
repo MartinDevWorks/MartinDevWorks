@@ -236,7 +236,7 @@ summary {
     margin: 0 auto;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     summary {
         width: 20%;
     }
