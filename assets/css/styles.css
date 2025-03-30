@@ -236,6 +236,13 @@ summary {
     margin: 0 auto;
 }
 
+@media (min-width: 768px) {
+    summary {
+        width: 20%;
+    }
+    
+}
+
 summary:hover {
     color: var(--color-white);
 }
