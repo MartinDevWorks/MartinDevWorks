@@ -8,6 +8,7 @@
     --bolder-font: 900;
     --bg-color: #0d1117;
     --primary-color: #58a6ff;
+    --primary-color-2: #0e89d1;
     --secondary-color: #f78166;
     --primary-shadow: #8b8eaf;
     --secondary-shadow: #a17a69;
@@ -16,7 +17,7 @@
     --button-bg: #21262d;
     --bottom-margin: 0.5rem;
     --bottom-margin-2: 1rem;
-    --line-height: 1.7rem;
+    --line-height: 1.6rem;
     --transition: 0.3s;
 }
   /* Variables fin */  
@@ -90,6 +91,7 @@ nav a {
     position: relative;
     transition: color 0.3s ease-in-out, background-color 0.3s ease;
     padding-left: 3.5rem;
+    font-size: 1.1rem;
 } 
 
 
@@ -139,7 +141,7 @@ nav ul.show {
 
 .menu-hamburguesa {
     display: block;
-    color: var(--primary-color);
+    color: var(--color-white);
     font-size: 3rem;
     border: none;
     background: transparent;
@@ -197,36 +199,72 @@ nav ul.show {
 
 /* Mas sobre mi */
 .mas-sobre {
-    background-color: var(--button-bg);
-    padding: 1rem 3.5rem;
+    background-color: linear-gradient(135deg, var(--primary-color), var(--primary-color-2));
+    padding: 1.5rem 3rem;
     margin-top: 2rem;
     max-width: 68.75rem;
-    width: 100%;
     text-align: center;
     margin: 0 auto;
-    border-radius: 6px;
-    box-shadow: 0px 1px 5px 1px var(--secondary-color);
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;   
 }
 
+.mas-sobre:hover {
+    transform: scale(1.02);
+    
+}
 
-.mas-sobre h2 {
-    margin-bottom: var(--bottom-margin-2);
-    text-align: center;
+details {
+/* background-color: var(--button-bg);*/
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+
+}
+
+summary {
+    font-size: 1.5rem;
     color: var(--primary-color);
+    cursor: pointer;
+    font-weight: var(--bold-font);
+    padding: 0.9rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background-color: var(--button-bg);
+    width: 30%;
+    margin: 0 auto;
+}
+
+summary:hover {
+    color: var(--color-white);
+}
+
+details[open]  {
+    background-color: var(--button-bg);
+    box-shadow: 0 5px 5px var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    
 }
 
 .mas-sobre p {
     line-height: var(--line-height);
     text-align: justify;
-    padding: 0.3rem 0;
+    padding: 0.5rem 0;
     margin-bottom: var(--bottom-margin);
     color: var(--color-white);
-    font-size: 1.2rem;
+    font-size: 1.1em;
 }
 
-.mas-sobre p:hover {
-    opacity: 10;
 
+
+.mas-sobre strong {
+    color: var(--primary-color);
+}
+
+.mas-sobre em {
+    color: var(--primary-color-2);
 }
 
 
