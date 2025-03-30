@@ -245,7 +245,7 @@ summary {
 
 @media (max-width: 480px) {
     summary {
-        width: 100%;
+        max-width: 100%;
     }
     
 }
