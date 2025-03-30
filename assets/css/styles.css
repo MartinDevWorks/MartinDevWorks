@@ -243,6 +243,13 @@ summary {
     
 }
 
+@media (max-width: 480px) {
+    summary {
+        width: 100%;
+    }
+    
+}
+
 summary:hover {
     color: var(--color-white);
 }
