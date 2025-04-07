@@ -146,8 +146,8 @@ body.light-theme {
     border: none;
     cursor: pointer;
     position: fixed;
-    top: 10%;
-    right: 1%;
+    top: 20%;
+    right: 1.5rem;
 }
 
 
@@ -571,7 +571,7 @@ details[open]  {
 
     #theme-toggle {
         right: 0.5%;
-        top: 20%;
+        top: 25%;
         
     }
 }
