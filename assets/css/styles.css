@@ -383,15 +383,6 @@ details[open]  {
     margin-bottom: 1rem;
 }
 
-.contenedor-habilidades {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-
 .icon{
     width: 15rem;
     height: 15rem;
@@ -403,12 +394,11 @@ details[open]  {
     background-color: var(--button-hover-transparente-1);
 }
 
-
 .icon-card {
     background-color: var(--button-bg);
     border-radius: 11px;
     box-shadow: 0 1px 5px var(--primary-shadow);
-    padding: 1rem;
+    padding: 0.1rem;
     margin: 0.75rem;
 }
 
