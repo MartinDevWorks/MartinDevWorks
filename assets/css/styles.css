@@ -12,17 +12,24 @@
     --secondary-color: #f78166;
     --primary-shadow: #8b8eaf;
     --secondary-shadow: #a17a69;
-    --color-white: #ffffff;
+    --color-white: #fff;
+    --color-white-1: #eef1ec;
+    --color-Ivory: #FFFFF0;
     --button-hover: #30363d;
+    --button-hover-transparente: rgba(48 54 61 / 1%);
+    --button-hover-transparente-1: rgba(48 54 61 / 4%);
+    --button-hover-transparente-2: rgba(48 54 61 / 8%);
+    --button-hover-transparente-3: rgba(48 54 61 / 32%);
     --button-bg: #21262d;
     --bottom-margin: 0.5rem;
     --bottom-margin-2: 1rem;
     --line-height: 1.5rem;
     --transition: 0.3s;
 }
-  /* Variables fin */  
 
-@media only screen and (max-width: 480px) {
+/* Variables fin */  
+
+@media only screen and (max-width: 480px) and (orientation: portrait) {
     body::-webkit-scrollbar {
         display: none;
     }
@@ -57,6 +64,91 @@ body {
     font-family: var(--font-family);
 }
 
+/* Tema oscuro por defecto */
+body {
+    background-color: var(--bg-color);
+    color: var(--color-white);
+    transition: all 0.3s ease;
+}
+
+  /* Tema claro */
+body.light-theme {
+    background-color: var(--color-Ivory);
+    color: var(--secondary-color);
+}
+
+.light-theme nav {
+    background-color: var(--button-hover);    
+}
+
+.light-theme .bio {
+    background-color: var(--button-hover-transparente);   
+}
+
+.light-theme .bio p {
+    color: var(--bg-color);
+}
+
+.light-theme .socicon {
+    border-radius: 50%;
+    border-color: var(--primary-color);
+}
+
+.light-theme details[open] {
+    background-color: var(--button-hover-transparente);
+}
+
+.light-theme .mas-sobre p {
+    color: var(--bg-color);
+}
+
+.light-theme summary {
+    color: var(--bg-color);
+}   
+
+.light-theme .icon-card {
+    background-color: var(--button-hover-transparente-1);
+}
+
+.light-theme .icon-card:hover {
+    background-color: var(--button-hover-transparente);
+    box-shadow: 0 2px 5px var(--secondary-shadow);
+}
+
+.light-theme .contenedor-de-proyecto {
+    background-color: var(--button-hover-transparente-2);
+}
+
+.light-theme .contenedor-de-proyecto:hover {
+    background-color: var(--button-hover-transparente);
+    outline: 2px solid var(--primary-shadow);
+}
+
+.light-theme .detalles-de-proyecto {
+    color: var(--bg-color);
+}
+
+.light-theme .enlace-de-proyecto {
+    color: var(--primary-color-2);
+}
+
+.light-theme .formulario-contacto-contenedor {
+    background-color: var(--button-hover-transparente-3);
+}
+
+.light-theme .formulario-contacto-contenedor label {
+    color: var(--bg-color);
+}
+
+#theme-toggle {
+    font-size: 2.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 10%;
+    right: 1%;
+}
 
 
 /* Navegacion */
@@ -65,7 +157,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 5px rgb(0 0 0 / 10%);
     padding: 0.1rem 0.2rem;    
     background-color: var(--button-bg);
 }  
@@ -87,7 +179,6 @@ nav span {
 nav a {
     text-decoration: none;
     color: var(--color-white);
-    transition: var(--transition);
     position: relative;
     transition: color 0.3s ease-in-out, background-color 0.3s ease;
     padding-left: 3.5rem;
@@ -120,7 +211,6 @@ nav ul {
     text-align: center;
     top: 100%;
     width: 90%;
-    text-align: center; 
     transform: translateX(120%);
     transition: transform 0.5s ease-in;
 }
@@ -179,7 +269,7 @@ nav ul.show {
     width: 25.5rem;
     padding: 1rem;
     border-radius: 6px;
-    box-shadow: 0px 1px 5px 1px var(--secondary-color);
+    box-shadow:  0px 5px 2px var(--primary-shadow);
     max-width: 100%;
 }
 
@@ -213,7 +303,6 @@ nav ul.show {
 }
 
 details {
-/* background-color: var(--button-bg);*/
     padding: 0.5rem;
     border-radius: 8px;
     transition: all 0.3s ease;
@@ -242,13 +331,12 @@ summary {
 }
 
 summary:hover {
-    color: var(--color-white);
     background-color: var(--primary-color);
 }
 
 details[open]  {
     background-color: var(--button-bg);
-    box-shadow: 0 2px 5px var(--secondary-color);
+    box-shadow: 0 2px 5px var(--primary-shadow);
     padding: 1.5rem;
     border-radius: 12px; 
     transition: transform 0.3s ease-in-out; 
@@ -304,13 +392,14 @@ details[open]  {
 .icon:hover {
     transform: scale(1.1);
     transition: var(--transition) 3ms ease-in-out;
+    background-color: var(--button-hover-transparente-1);
 }
 
 
 .icon-card {
-    background-color: var(--bg-color);
+    background-color: var(--button-bg);
     border-radius: 11px;
-    box-shadow: 0 1px 5px var(--secondary-color);
+    box-shadow: 0 1px 5px var(--primary-shadow);
     padding: 2rem;
     margin: 1rem;
 }
@@ -318,7 +407,7 @@ details[open]  {
 
 /* Proyectos */
 .proyectos {
-    background-color: var(--bg-color);
+    background-color: var();
     margin-bottom: 2rem;
     padding: 1px;    
 }
@@ -349,17 +438,16 @@ details[open]  {
     background-color: var(--button-bg);
     padding: 1rem;
     border-radius: 11px;
-    box-shadow: 0 2px 10px var(--secondary-color);
+    box-shadow: 0 5px 2px var(--primary-shadow);
     transition: var(--transition);
 }
 
-/* box-shadow: 0 3px 10px var(--secondary-color);
-outline: 3px solid var(--secondary-color); */
 
 .contenedor-de-proyecto:hover {
     transform: translateY(-2px);
     transition: var(--transition);
-    outline: 3px solid var(--secondary-color);
+    outline: 2px solid var(--primary-shadow);
+    background-color: var(--bg-color);
 }
 
 .detalles-de-proyecto {
@@ -397,7 +485,7 @@ outline: 3px solid var(--secondary-color); */
     margin: 0 auto;
     padding: 1.5rem;
     border-radius: 5px;
-    box-shadow: 0 3px 12px var(--secondary-color);
+    box-shadow: 0px 7px 4px var(--primary-shadow);
     background-color: var(--button-bg);
 }
 
@@ -443,22 +531,20 @@ outline: 3px solid var(--secondary-color); */
     padding: 1rem;
     margin: 1px 0;
     background-color: var(--primary-color);
-    border: 2px solid var(--button-bg);
     border-radius: 10px;
     font-size: 1.5rem;
     transition: var(--transition);
     margin-top: 1rem; 
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) and (orientation: portrait) {
     .boton-enviar {
         width: 100%;
     }
 }
 
 .boton-enviar:hover {
-    background-color: var(--secondary-color);
-    border: 2px solid var(--primary-color);
+    background-color: var(--primary-color-2);
     cursor: pointer;
 }
 
@@ -478,9 +564,15 @@ outline: 3px solid var(--secondary-color); */
     gap: 0.5rem;
 } 
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 320px) and (orientation: portrait) {
     .sociales {
         bottom: 12%;
+    }
+
+    #theme-toggle {
+        right: 0.5%;
+        top: 20%;
+        
     }
 }
 
@@ -488,7 +580,6 @@ outline: 3px solid var(--secondary-color); */
 .sociales a {
     text-decoration: none;
     color: var(--color-white);
-    transition: var(--transition);
     position: relative;
     transition: color 0.3s ease, background-color 0.3s ease;
     padding: 0.5rem 1rem;
@@ -503,8 +594,10 @@ outline: 3px solid var(--secondary-color); */
 
 
 .socicon {
-    width: 2rem;
-    height: 2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    border: 2px solid var(--button-hover);
 }
 
 
@@ -557,23 +650,27 @@ footer a {
         background: none;
         
     }
+
     nav ul li {
         margin: 0 2rem;
     }
+
     .menu-hamburguesa {
         display: none;
     }
 }
 
 /* Pantallas medianas (Tablets) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (orientation: portrait) {
     .hero {
         flex-direction: column;
     }
+
     .hero img {
         max-width: 100%;
         height: auto;
     }
+
     .bio {
         width: 90%;
         max-width: 300px;
@@ -582,11 +679,12 @@ footer a {
 }
 
 /* Pantallas pequeñas (Celulares) */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) and (orientation: portrait) {
     .hero {
         max-width: 100%;
         max-width: 23rem;
     }
+
     .bio {
         width: 90%;
         max-width: 18.3rem;
@@ -596,7 +694,9 @@ footer a {
         max-width: 18rem;
         margin: 0 auto;
     }
+
     .formulario-contacto-contenedor {
         width: 90%;
     }
 }
+

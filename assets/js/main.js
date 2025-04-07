@@ -117,3 +117,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 4000);
     };
 });
+
+// Cambia el tema al hacer clic
+const toggleBtn = document.getElementById("theme-toggle");
+
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
+
+  // Cambia el icono
+if (document.body.classList.contains("light-theme")) {
+    toggleBtn.textContent = "🔆";
+    } else {
+    toggleBtn.textContent = "🌙";
+    }
+});
+
+

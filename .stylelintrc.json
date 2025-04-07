@@ -1,0 +1,11 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "property-no-unknown": [true, {
+      "ignoreProperties": ["scroll-behavior"]
+    }],
+    "declaration-block-no-duplicate-properties": true,
+    "block-no-empty": true,
+    "color-no-invalid-hex": true
+  }
+}
