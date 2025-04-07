@@ -74,7 +74,7 @@ body {
   /* Tema claro */
 body.light-theme {
     background-color: var(--color-Ivory);
-    color: var(--secondary-color);
+    color: var(--secundary-color);
 }
 
 .light-theme nav {
@@ -140,14 +140,20 @@ body.light-theme {
     color: var(--bg-color);
 }
 
+.light-theme
+.mensaje.exito,
+.mensaje.error {
+    color: var(--bg-color);
+}
+
 #theme-toggle {
     font-size: 2.5rem;
     background: none;
     border: none;
     cursor: pointer;
     position: fixed;
-    top: 20%;
-    right: 2rem;
+    top: 10%;
+    left: 12rem;
 }
 
 
@@ -276,7 +282,7 @@ nav ul.show {
 
 .bio h2 {
     margin-bottom: var(--bottom-margin);
-    color: var(--primary-color);
+    color: var(--primary-color-2);
     text-align: center;
 }
 
@@ -371,7 +377,7 @@ details[open]  {
 }
 
 .header-habilidades {
-    color: var(--primary-color);
+    color: var(--primary-color-2);
     padding-top: 1rem;
 }
 
@@ -385,12 +391,12 @@ details[open]  {
 
 
 .icon{
-    width: 15.75rem;
-    height: 15.75rem;
+    width: 15rem;
+    height: 15rem;
 }
 
 .icon:hover {
-    transform: scale(1.1);
+    transform: scale(1.02);
     transition: var(--transition) 3ms ease-in-out;
     background-color: var(--button-hover-transparente-1);
 }
@@ -404,6 +410,38 @@ details[open]  {
     margin: 1rem;
 }
 
+.first-set {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+.icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-label {
+    margin-top: 0.1rem;
+    font-size: 1.1rem;
+    color: var(--primary-color-2);
+    font-weight: var(--bold-font);
+}
+
+@media (max-width: 768px) {
+    .first-set {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .first-set {
+        grid-template-columns: 1fr;
+    }
+}
+/*   
 
 /* Proyectos */
 .proyectos {
@@ -415,7 +453,7 @@ details[open]  {
 .titulo-de-proyectos {
     text-align: center;
     margin-bottom: 1.5rem;
-    color: var(--primary-color);
+    color: var(--primary-color-2);
 }
 
 .titulo-de-proyecto {
@@ -477,14 +515,14 @@ details[open]  {
 .contacto h2 {
     text-align: center;
     margin-bottom: var(--bottom-margin-2);
-    color: var(--primary-color);
+    color: var(--primary-color-2);
 }
 
 .formulario-contacto-contenedor {
     max-width: 34.75rem;
     margin: 0 auto;
     padding: 1.5rem;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0px 7px 4px var(--primary-shadow);
     background-color: var(--button-bg);
 }
@@ -510,7 +548,7 @@ details[open]  {
 }
 
 .input-field:focus {
-    outline: 3px solid var(--primary-color);
+    outline: 2px solid var(--primary-color);
 }
 
 .control-formulario textarea {
@@ -567,12 +605,6 @@ details[open]  {
 @media screen and (max-width: 320px) and (orientation: portrait) {
     .sociales {
         bottom: 12%;
-    }
-
-    #theme-toggle {
-        right: 0.5%;
-        top: 25%;
-        
     }
 }
 
@@ -662,6 +694,7 @@ footer a {
 
 /* Pantallas medianas (Tablets) */
 @media screen and (max-width: 768px) and (orientation: portrait) {
+
     .hero {
         flex-direction: column;
     }
@@ -675,6 +708,11 @@ footer a {
         width: 90%;
         max-width: 300px;
         margin: 0 auto;
+    }
+
+    #theme-toggle {
+        left: 7rem;
+        top: 7rem;   
     }
 }
 
@@ -698,5 +736,16 @@ footer a {
     .formulario-contacto-contenedor {
         width: 90%;
     }
+
+    #theme-toggle {
+        left: 2rem;
+        top: 10rem;   
+    }
 }
 
+@media (max-width: 320px) and (orientation: portrait) {
+    #theme-toggle {
+        left: 1.2rem;
+        top: 11rem;   
+    }
+}
